@@ -73,3 +73,30 @@
   margin: 2rem auto;
   text-align: center;
 }
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .hero {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .cta {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slideshow {
+    order: 2;
+    width: 100%;
+  }
+
+  .section > p {
+    font-size: 20px;
+  }
+}
