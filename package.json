@@ -6,10 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma": {
+      "migrate": "prisma migrate deploy"
+    }
   },
   "dependencies": {
+    "@prisma/client": "^6.0.0",
     "better-sqlite3": "^11.3.0",
+    "cloudinary": "^2.5.1",
     "next": "14.2.14",
     "react": "^18",
     "react-dom": "^18",
@@ -22,6 +27,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
-    "typescript": "^5"
+    "prisma": "^6.0.0",
+    "typescript": "^5.7.2"
   }
 }

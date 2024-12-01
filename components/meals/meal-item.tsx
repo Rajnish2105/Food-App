@@ -1,17 +1,20 @@
 import classes from "./meal-item.module.css";
 import Image from "next/image";
 import Link from "next/link";
+
 type PropType = {
   instructions?: string;
   creator_email?: string;
   title: string;
   slug?: string;
+  id: number;
   image: any;
   summary: string;
   creator?: string;
 };
 
 export default function MealItem({
+  id,
   title,
   slug,
   image,
@@ -32,7 +35,7 @@ export default function MealItem({
       <div className={classes.content}>
         <p className={classes.summary}>{summary}</p>
         <div className={classes.actions}>
-          <Link href={`/meals/${slug}`}>View Details</Link>
+          <Link href={`/meals/${id}`}>View Details</Link>
         </div>
       </div>
     </article>

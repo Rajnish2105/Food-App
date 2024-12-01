@@ -6,8 +6,8 @@ import classes from "./page.module.css";
 import { ShareMeal } from "@/lib/actions";
 import MealsFormButton from "@/components/meals/meals-form-button";
 
-export default function ShareMealPage(): JSX.Element {
-  const [state, formAction] = useFormState(ShareMeal, { message: null });
+export default function ShareMealPage() {
+  const [state, formAction] = useFormState(ShareMeal, { message: "" });
 
   return (
     <>
@@ -47,7 +47,7 @@ export default function ShareMealPage(): JSX.Element {
             ></textarea>
           </p>
           <ImagePicker label="Your Images" name="image" />
-          {state.message && <p>{state.message}</p>}
+          {state?.message && state.message.length > 0 && <p>{state.message}</p>}
           <p className={classes.actions}>
             <MealsFormButton />
           </p>

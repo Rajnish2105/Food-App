@@ -1,9 +1,10 @@
 import MealItem from "./meal-item";
 import classes from "./meals-grid.module.css";
 
-type MealType = {
+export type MealType = {
   title: string;
   slug?: string;
+  id: number;
   image: any;
   summary: string;
   creator: string;
@@ -11,11 +12,11 @@ type MealType = {
   instructions?: string;
 };
 
-type MealsGridProps = {
-  meals: MealType[]; // meals should be an array of MealType
-};
-
-export default function MealsGrid({ meals }: MealsGridProps): JSX.Element {
+export default function MealsGrid({
+  meals,
+}: {
+  meals: MealType[];
+}): JSX.Element {
   return (
     <ul className={classes.meals}>
       {meals.map((meal: MealType) => (

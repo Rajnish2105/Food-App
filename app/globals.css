@@ -40,3 +40,16 @@ body {
   font-weight: 500;
   color: #ddd8d8;
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem; /* 2 multiplied by 0.25rem (base unit) */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db; /* bg-gray-300 */
+}
