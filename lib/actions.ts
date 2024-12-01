@@ -10,7 +10,10 @@ function isInvalidText(text: string) {
   return !text || text.trim() === "";
 }
 
-export async function ShareMeal(prevState: any, formData: FormData) {
+export async function ShareMeal(
+  prevState: { message: string } | null,
+  formData: FormData
+) {
   console.log("FormData", formData);
 
   const meal = {

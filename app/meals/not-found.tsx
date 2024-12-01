@@ -5,8 +5,8 @@ export default function NotFound(): JSX.Element {
     <main className="not-found">
       <h1>Meal Not Found</h1>
       <p>
-        Unfortunatly, we couldn't find the Requested Meal. We are working on that
-        recipe...
+        Unfortunatly, we couldn&apos;t find the Requested Meal. We are working
+        on that recipe...
       </p>
       <p>
         Untill then Try other recipes on <Link href="/">Home</Link>

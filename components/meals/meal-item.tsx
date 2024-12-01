@@ -6,9 +6,8 @@ type PropType = {
   instructions?: string;
   creator_email?: string;
   title: string;
-  slug?: string;
   id: number;
-  image: any;
+  image: string;
   summary: string;
   creator?: string;
 };
@@ -16,7 +15,6 @@ type PropType = {
 export default function MealItem({
   id,
   title,
-  slug,
   image,
   summary,
   creator,

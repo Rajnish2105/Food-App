@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import classes from "./page.module.css";
-import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 
-type PropType = {
-  params: Record<string, any>;
-};
-
 export async function generateMetadata({
   params,
-}: PropType): Promise<Metadata> {
+}: {
+  params: { mealslug: string };
+}): Promise<Metadata> {
   const mealMeta = await getRequestedMeal(params.mealslug);
   if (!mealMeta) {
     notFound();
@@ -37,7 +34,9 @@ async function getRequestedMeal(mealId: string) {
 
 export default async function FoodPage({
   params,
-}: PropType): Promise<JSX.Element> {
+}: {
+  params: { mealslug: string };
+}) {
   const meal = await getRequestedMeal(params.mealslug);
 
   if (!meal) {

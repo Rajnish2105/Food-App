@@ -5,7 +5,7 @@ export type MealType = {
   title: string;
   slug?: string;
   id: number;
-  image: any;
+  image: string;
   summary: string;
   creator: string;
   creator_email?: string;
